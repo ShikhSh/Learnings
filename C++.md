@@ -12,7 +12,7 @@
 ### Iterators:
 - vector<int>::iterator it;
 - for(it = v.begin(); it != v.end(); it++)
--   cout << *it << "\n";
+    cout << *it << "\n"; 
 ### References:
 - https://www.programiz.com/cpp-programming/vectors
 - 
