@@ -12,7 +12,7 @@
 ### Iterators:
 - vector<int>::iterator it;
 - for(it = v.begin(); it != v.end(); it++)
-    cout << *it << "\n"; 
+    cout << *it << "\n"; -> IMP!! - how to access item through vector -> *it
 ### References:
 - https://www.programiz.com/cpp-programming/vectors
 - 
