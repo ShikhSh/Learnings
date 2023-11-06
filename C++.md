@@ -42,3 +42,10 @@
 ### Update
 ### Iterators
 ### References
+
+## Template:
+### Size
+### Access/find
+### Update
+### Iterators
+### References
