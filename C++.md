@@ -9,6 +9,10 @@
       - vectors - #include <vector>
 
 ## Vectors:
+### Iterators:
+- vector<int>::iterator it;
+- for(it = v.begin(); it != v.end(); it++)
+-   cout << *it << "\n";
 ### References:
 - https://www.programiz.com/cpp-programming/vectors
 - 
