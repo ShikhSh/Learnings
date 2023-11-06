@@ -7,18 +7,19 @@
   - Important Directives:
     - #include <bits/stdc++.h> -> It is basically a header file that includes every standard library. In programming contests, using this file is a good idea, when you want to reduce the time wasted in doing chores; especially when your rank is time sensitive.
       - vectors - #include <vector>
+      - https://www.geeksforgeeks.org/bitsstdc-h-c/
 ## Pass by value/reference:
 - Passed by value by default!
 - For Vectors/Maps/Sets, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
 # C++ Data Structures
+`abs`
 ## Vectors:
 ### Size:
 - v.size()
 ### Access elements:
 - v.back() ; v.front()
-- 
 ### Update:
 - v.push_back(ele)
 - v.pop_back()
@@ -34,4 +35,10 @@
     cout << *it << "\n"; -> IMP!! - how to access item through vector -> *it
 ### References:
 - https://www.programiz.com/cpp-programming/vectors
-- 
+
+## Template:
+### Size
+### Access/find
+### Update
+### Iterators
+### References
