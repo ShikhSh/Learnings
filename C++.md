@@ -21,7 +21,7 @@
 ### Access elements:
 - v.back() ; v.front()
 ### Update:
-- v.push_back(ele)
+- v.push_back(ele) -> for vector of vectors, creates a deep copy and then stores it (https://www.geeksforgeeks.org/push_back-vs-emplace_back-in-cpp-stl-vectors/)
 - v.pop_back()
 - v.clear() -> remove all
 - v.erase()
