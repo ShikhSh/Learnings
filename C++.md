@@ -1,11 +1,11 @@
 # C++ Basics
-### Important Includes:
+## Important Includes:
 - What does #include do?
   - #something -> Directive - https://learn.microsoft.com/en-us/cpp/preprocessor/hash-include-directive-c-cpp?view=msvc-170
-  - Tells the preprocessor to include the contents of a specified file at the point where the directive appears.
+  - Tells the Compiler/Preprocessor to include the contents of a specified file at the point where the directive appears before this code is compiled.
   - Makes it easier to read, maintain, and modify code.
   - Important Directives:
-    - #include <bits/stdc++.h> -> includes most of the important functionalities like:
+    - #include <bits/stdc++.h> -> It is basically a header file that includes every standard library. In programming contests, using this file is a good idea, when you want to reduce the time wasted in doing chores; especially when your rank is time sensitive.
       - vectors - #include <vector>
 ## Pass by value/reference:
 - Passed by value by default!
