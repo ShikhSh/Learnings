@@ -13,6 +13,15 @@
 - For Vectors/Maps/Sets, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
+## Memory Allocation and Resource Management:
+https://stackoverflow.com/questions/6500313/why-should-c-programmers-minimize-use-of-new
+https://isocpp.org/wiki/faq/freestore-mgmt#:~:text=Having%20said%20that%2C%20benefits%20of,which%20isn't%20type%20safe.
+https://stackoverflow.com/questions/655065/when-should-i-use-the-new-keyword-in-c
+
+new/delete vs malloc vs static allocation
+- RAII - https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization
+- Dynamic
+- Static
 # C++ Data Structures
 `abs`
 ## Vectors:
