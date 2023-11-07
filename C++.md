@@ -8,11 +8,13 @@
     - #include <bits/stdc++.h> -> It is basically a header file that includes every standard library. In programming contests, using this file is a good idea, when you want to reduce the time wasted in doing chores; especially when your rank is time sensitive.
       - vectors - #include <vector>
       - https://www.geeksforgeeks.org/bitsstdc-h-c/
+
 ## Pass by value/reference:
 - Passed by value by default!
 - For Vectors/Maps/Sets, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
+
 ## Memory Allocation and Resource Management:
 https://stackoverflow.com/questions/6500313/why-should-c-programmers-minimize-use-of-new
 https://isocpp.org/wiki/faq/freestore-mgmt#:~:text=Having%20said%20that%2C%20benefits%20of,which%20isn't%20type%20safe.
@@ -29,6 +31,11 @@ new/delete vs malloc vs static allocation
   -  Perl, Python (in the CPython implementation),[20] and PHP[21] manage object lifetime by reference counting, which makes it possible to use RAII. Objects that are no longer referenced are immediately destroyed or finalized and released, so a destructor or finalizer can release the resource at that time.
 - Dynamic
 - Static
+  
+## Features:
+### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
+https://www.geeksforgeeks.org/virtual-function-cpp/#
+
 # C++ Data Structures
 `abs`
 ## Vectors:
