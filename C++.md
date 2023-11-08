@@ -1,4 +1,6 @@
 # C++ Basics
+## TODO:
+- https://www.geeksforgeeks.org/executing-main-in-c-behind-the-scene/
 ## Important Includes:
 - What does #include do?
   - #something -> Directive - https://learn.microsoft.com/en-us/cpp/preprocessor/hash-include-directive-c-cpp?view=msvc-170
