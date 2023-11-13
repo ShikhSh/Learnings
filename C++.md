@@ -12,6 +12,8 @@
       - vectors - #include <vector>
       - https://www.geeksforgeeks.org/bitsstdc-h-c/
 
+## Class vs Struct:
+
 ## Pass by value/reference:
 - Passed by value by default!
 - For Vectors/Maps/Sets, etc -> use & operator
