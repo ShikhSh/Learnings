@@ -1,7 +1,7 @@
 # C++ Basics
 - https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp
 - Machine Independent + Cross-Platform (NOT platform independent) extension to C (Machine Independent but Platform Dependent: A C++ executable is not platform-independent (compiled programs on Linux won’t run on Windows), however they are machine independent.)
-- Mid-level language: It is a mid-level language as we can do both systems-programming (drivers, kernels, networking etc.) and build large-scale user applications (Media Players, Photoshop, Game Engines etc.)
+- High-level (+ supports Mid-level) language: It is a mid-level language as we can do both systems-programming (drivers, kernels, networking etc.) and build large-scale user applications (Media Players, Photoshop, Game Engines etc.)
 - Compiled Language: C++ is a compiled language, contributing to its speed.
 - Object Oriented (thus make maintainable and extensible programs)
 - Supports Procedural Functions
@@ -52,6 +52,10 @@ new/delete vs malloc vs static allocation
 ## Features:
 ### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
 https://www.geeksforgeeks.org/virtual-function-cpp/#
+
+### Auto Keyword:
+- The idea of the auto keyword was to form the C++ compiler to deduce the data type while compiling instead of making you declare the data type every freaking time. Do keep in mind that you cannot declare something without an initializer. There must be some way for the compiler to deduce your type.
+- https://www.geeksforgeeks.org/type-inference-in-c-auto-and-decltype/
 
 # C++ Data Structures
 `abs`
