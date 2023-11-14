@@ -16,7 +16,7 @@
 
 ## Pass by value/reference:
 - Passed by value by default!
-- For Vectors/Maps/Sets, etc -> use & operator
+- For Vectors/Maps/Sets or anything else including int, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
 
