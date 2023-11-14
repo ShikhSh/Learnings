@@ -63,6 +63,14 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
   - ::x
   - this->x
 
+### Datatypes:
+- Primitive
+- Derived - https://www.geeksforgeeks.org/derived-data-types-in-c/?ref=lbp
+- User-defined
+#### Reference vs Pointers:
+- Pointers are symbolic representation of addresses. They enable programs to simulate call-by-reference as well as to create and manipulate dynamic data structures.
+- When a variable is declared as reference, it becomes an alternative name for an existing variable. A variable can be declared as reference by putting ‘&’ in the declaration.
+
 ### Static Variables
 - Static variables in a Function: When a variable is declared as static, space for it gets allocated for the lifetime of the program. Even if the function is called multiple times, space for the static variable is allocated only once and the value of the variable in the previous call gets carried through the next function call.
 - Static variables in a class: As the variables declared as static are initialized only once as they are allocated space in separate static storage so, the static variables in a class are shared by the objects.
@@ -78,7 +86,7 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 - ULONG_MAX - Maximum value for an object of type Unsigned long int
 - LLONG_MIN - The minimum value for an object of type long long int
 - LLONG_MAX - Maximum value for an object of type long long int
-Primitive data types - https://www.geeksforgeeks.org/cpp-data-types/?ref=lbp
+- Primitive data types - https://www.geeksforgeeks.org/cpp-data-types/?ref=lbp
 
 `abs`
 ## Vectors:
