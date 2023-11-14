@@ -1,5 +1,13 @@
 # C++ Basics
 - https://www.geeksforgeeks.org/c-plus-plus/?ref=lbp
+- Machine Independent + Cross-Platform (NOT platform independent) extension to C (Machine Independent but Platform Dependent: A C++ executable is not platform-independent (compiled programs on Linux won’t run on Windows), however they are machine independent.)
+- Mid-level language: It is a mid-level language as we can do both systems-programming (drivers, kernels, networking etc.) and build large-scale user applications (Media Players, Photoshop, Game Engines etc.)
+- Compiled Language: C++ is a compiled language, contributing to its speed.
+- Object Oriented (thus make maintainable and extensible programs)
+- Supports Procedural Functions
+- Speed of execution: C++ programs excel in execution speed. Since, it is a compiled language, and also hugely procedural. Newer languages have extra in-built default features such as garbage-collection, dynamic typing etc. which slow the execution of the program overall. Since there is no additional processing overhead like this in C++, it is blazing fast.
+- Support low-level, system-level programming (gives low level control to memory through Pointer and direct Memory-Access) in addition to providing abstractions and supporting High Level Programming
+- Supports Generic programming styles through templates
 ## TODO:
 - https://www.geeksforgeeks.org/executing-main-in-c-behind-the-scene/
 ## Important Includes:
