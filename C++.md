@@ -34,6 +34,8 @@ new/delete vs malloc vs static allocation
   -  Resource management therefore needs to be tied to the lifespan of suitable objects in order to gain automatic allocation and reclamation. Resources are acquired during initialization, when there is no chance of them being used before they are available, and released with the destruction of the same objects, which is guaranteed to take place even in case of errors.
   -  Ownership of dynamically allocated objects (memory allocated with new in C++) can also be controlled with RAII, such that the object is released when the RAII (stack-based) object is destroyed. For this purpose, the C++11 standard library defines the smart pointer classes std::unique_ptr for single-owned objects and std::shared_ptr for objects with shared ownership.
   -  Perl, Python (in the CPython implementation),[20] and PHP[21] manage object lifetime by reference counting, which makes it possible to use RAII. Objects that are no longer referenced are immediately destroyed or finalized and released, so a destructor or finalizer can release the resource at that time.
+
+- IMP! For DSA - If creating a Treenode or TrieNode, use dynamic memory allocation with New, since they need to persist beyond the scope of the current object/function to be tested on online platforms.
 - Dynamic
 - Static
   
