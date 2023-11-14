@@ -76,6 +76,15 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 - Static variables in a class: As the variables declared as static are initialized only once as they are allocated space in separate static storage so, the static variables in a class are shared by the objects.
 - Static functions in a class: Just like the static data members or static variables inside the class, static member functions also do not depend on the object of the class. We are allowed to invoke a static member function using the object and the ‘.’ operator but it is recommended to invoke the static members using the class name and the scope resolution operator. Static member functions are allowed to access only the static data members or other static member functions, they can not access the non-static data members or member functions of the class. 
 
+### Inline functions:
+- https://www.geeksforgeeks.org/inline-functions-cpp/?ref=lbp
+- C++ provides inline functions to reduce the function call overhead. An inline function is a function that is expanded in line when it is called. When the inline function is called whole code of the inline function gets inserted or substituted at the point of the inline function call. This substitution is performed by the C++ compiler at compile time. An inline function may increase efficiency if it is small.
+- Function call overhead doesn’t occur.
+- It also saves the overhead of push/pop variables on the stack when a function is called.
+- It also saves the overhead of a return call from a function.
+- When you inline a function, you may enable the compiler to perform context-specific optimization on the body of the function.
+
+
 # C++ Data Structures
 ### Macros for data type ranges
 - INT_MIN - The minimum value for an object of type int
