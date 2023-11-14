@@ -87,8 +87,8 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 - LLONG_MIN - The minimum value for an object of type long long int
 - LLONG_MAX - Maximum value for an object of type long long int
 - Primitive data types - https://www.geeksforgeeks.org/cpp-data-types/?ref=lbp
-
-`abs`
+### Implicit Type conversion
+`bool -> char -> short int -> int -> unsigned int -> long -> unsigned -> long long -> float -> double -> long double`
 ## Vectors:
 ### Size:
 - v.size()
