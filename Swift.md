@@ -12,6 +12,9 @@
 3. MVVM
 4. VIPER
 
+## Dependency Injection:
+- https://www.youtube.com/watch?v=RlfLCWKxHJ0
+
 ## @nonescaping closures:
 - Closures by default -> non-escaping, i.e. they will not exit the scope of the current function to which they are passed on to.
 - by defining them as non-escaping -> let them go beyond the scope of the current function.
