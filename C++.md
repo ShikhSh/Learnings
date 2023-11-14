@@ -5,7 +5,7 @@
 - Compiled Language: C++ is a compiled language, contributing to its speed.
 - Object Oriented (thus make maintainable and extensible programs)
 - Supports Procedural Functions
-- Speed of execution: C++ programs excel in execution speed. Since, it is a compiled language, and also hugely procedural. Newer languages have extra in-built default features such as garbage-collection, dynamic typing etc. which slow the execution of the program overall. Since there is no additional processing overhead like this in C++, it is blazing fast.
+- Speed of execution: C++ programs excel in execution speed. Since, it is a compiled language, and also hugely procedural. Newer languages have extra in-built default features such as garbage-collection, dynamic typing etc. which slow the execution of the program overall. Since there is no additional processing overhead like this in C++, it is blazing fast. Code is transformed into machine code before it is executed. This can result in faster execution times and improved performance compared to interpreted languages like Python.
 - Support low-level, system-level programming (gives low level control to memory through Pointer and direct Memory-Access) in addition to providing abstractions and supporting High Level Programming
 - Supports Generic programming styles through templates
 ## TODO:
