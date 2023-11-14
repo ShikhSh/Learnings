@@ -14,21 +14,20 @@
 - by defining them as non-escaping -> let them go beyond the scope of the current function.
 - Helps in compiler optimization - because if the compiler knows that the closure is non-escaping, will take care about the memory allocation for the closure.
 - Another one is, we can use self without problems in non-escaping closures because the closure executes before the function returns so the self will be there by sure. We don’t need to use weak self.
-'''
-// Function taking an escaping closure as a parameter
-func performAsyncOperation(completion: @escaping () -> Void) {
-    DispatchQueue.global().async {
-        // Simulating an asynchronous operation
-        // ...
 
-        // Call the completion closure when the operation is done
-        completion()
+    // Function taking an escaping closure as a parameter
+    func performAsyncOperation(completion: @escaping () -> Void) {
+        DispatchQueue.global().async {
+            // Simulating an asynchronous operation
+            // ...
+    
+            // Call the completion closure when the operation is done
+            completion()
+        }
     }
-}
-'''
-// Example of using the function
-performAsyncOperation {
-    print("Asynchronous operation completed")
-}
+    // Example of using the function
+    performAsyncOperation {
+        print("Asynchronous operation completed")
+    }
 
 - Here closure escapes the execution of the current function since it is passed on to an async queue.
