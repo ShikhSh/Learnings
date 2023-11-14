@@ -12,6 +12,19 @@
 3. MVVM
 4. VIPER
 
+## Protocols and Protocol-based programming:
+- The protocol-oriented programming (POP) approach in iOS development is similar to using interfaces in other programming languages, such as Java or Swift's predecessor, Objective-C. Protocols in Swift are akin to interfaces in other languages, providing a way to define a set of methods and properties that a conforming type must implement.
+- Here are some key similarities:
+- Definition of Contracts:
+- Both protocols and interfaces define a contract or blueprint for a set of methods and properties that conforming types or classes must adhere to.
+    - Conformance: Types in Swift conform to protocols, just as classes in other languages implement interfaces. Conformance implies that the type provides implementations for all the requirements specified by the protocol or interface.
+    - Polymorphism: Protocols support polymorphism, allowing multiple types to conform to the same protocol. This facilitates the use of generic code that can work with any type adhering to a specific protocol.
+    - Code Reusability: Both protocols and interfaces promote code reusability by allowing different types to share a common set of functionalities.
+- However, there are also differences between protocols in Swift and interfaces in some other languages:
+    - Protocol Extensions: Swift introduces the concept of protocol extensions, allowing you to provide default implementations for methods in a protocol. This enables retroactive modeling of protocols, meaning you can make existing types conform to a protocol without modifying their source code.
+    - Value Types: In Swift, both classes and value types (structs and enums) can conform to protocols. This is different from some other languages where interfaces are typically implemented by classes.
+    - Associated Types: Swift protocols can include associated types, allowing protocols to represent generic types that are not specified until the protocol is adopted.
+
 ## Dependency Injection:
 - https://www.youtube.com/watch?v=RlfLCWKxHJ0
 
