@@ -57,7 +57,28 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 - The idea of the auto keyword was to form the C++ compiler to deduce the data type while compiling instead of making you declare the data type every freaking time. Do keep in mind that you cannot declare something without an initializer. There must be some way for the compiler to deduce your type.
 - https://www.geeksforgeeks.org/type-inference-in-c-auto-and-decltype/
 
+### Global and local variables with same name:
+- scope resolution for the global variable
+- https://www.geeksforgeeks.org/scope-resolution-operator-in-c/
+  - ::x
+  - this->x
+
+### Static Variables
+- Static variables in a Function: When a variable is declared as static, space for it gets allocated for the lifetime of the program. Even if the function is called multiple times, space for the static variable is allocated only once and the value of the variable in the previous call gets carried through the next function call.
+- Static variables in a class: As the variables declared as static are initialized only once as they are allocated space in separate static storage so, the static variables in a class are shared by the objects.
+- Static functions in a class: Just like the static data members or static variables inside the class, static member functions also do not depend on the object of the class. We are allowed to invoke a static member function using the object and the ‘.’ operator but it is recommended to invoke the static members using the class name and the scope resolution operator. Static member functions are allowed to access only the static data members or other static member functions, they can not access the non-static data members or member functions of the class. 
+
 # C++ Data Structures
+### Macros for data type ranges
+- INT_MIN - The minimum value for an object of type int
+- INT_MAX - Maximum value for an object of type int
+- UINT_MAX - Maximum value for an object of type Unsigned int
+- LONG_MIN - The minimum value for an object of type long int
+- LONG_MAX - Maximum value for an object of type long int
+- ULONG_MAX - Maximum value for an object of type Unsigned long int
+- LLONG_MIN - The minimum value for an object of type long long int
+- LLONG_MAX - Maximum value for an object of type long long int
+
 `abs`
 ## Vectors:
 ### Size:
