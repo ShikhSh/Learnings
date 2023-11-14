@@ -1,4 +1,7 @@
 # Swift
+## System Design Approach:
+- https://www.youtube.com/watch?v=pfrjGFDXRt4
+- Additional resources (if needed) - https://medium.com/@m3amer/ios-system-design-architecture-example-d55384da1449
 
 ## Design patterns:
 - https://medium.com/swlh/ios-design-patterns-a9bd07818129
