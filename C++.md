@@ -20,15 +20,16 @@
       - vectors - #include <vector>
       - https://www.geeksforgeeks.org/bitsstdc-h-c/
 
-## Class vs Struct:
+## Features:
+### Class vs Struct:
 
-## Pass by value/reference:
+### Pass by value/reference:
 - Passed by value by default!
 - For Vectors/Maps/Sets or anything else including int, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
 
-## Memory Allocation and Resource Management:
+### Memory Allocation and Resource Management:
 https://stackoverflow.com/questions/6500313/why-should-c-programmers-minimize-use-of-new
 https://isocpp.org/wiki/faq/freestore-mgmt#:~:text=Having%20said%20that%2C%20benefits%20of,which%20isn't%20type%20safe.
 https://stackoverflow.com/questions/655065/when-should-i-use-the-new-keyword-in-c
@@ -48,8 +49,7 @@ new/delete vs malloc vs static allocation
 - IMP! For DSA - If creating a Treenode or TrieNode, use dynamic memory allocation with New, since they need to persist beyond the scope of the current object/function to be tested on online platforms.
 - Dynamic
 - Static
-  
-## Features:
+
 ### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
 https://www.geeksforgeeks.org/virtual-function-cpp/#
 
