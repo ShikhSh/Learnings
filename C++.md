@@ -62,9 +62,15 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 
 ### Global and local variables with same name:
 - scope resolution for the global variable
+- https://www.geeksforgeeks.org/scope-resolution-operator-vs-this-pointer-in-cpp/?ref=lbp
 - https://www.geeksforgeeks.org/scope-resolution-operator-in-c/
-  - ::x
+  - ::x -> WRONG, since this can be used for only static variables and functions
   - this->x
+
+### Semi-colon after class and structs and unions:
+Many people might say that it’s a basic syntax and we should give a semicolon at the end of the class as its rule defines in cpp. But the main reason why semi-colons are there at the end of the class is compiler checks if the user is trying to create an instance of the class at the end of it. 
+Yes just like structure and union, we can also create the instance of a class at the end just before the semicolon. As a result, once execution reaches at that line, it creates a class and allocates memory to your instance.
+https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
 
 ### Datatypes:
 - Primitive
@@ -87,6 +93,9 @@ https://www.geeksforgeeks.org/virtual-function-cpp/#
 - It also saves the overhead of a return call from a function.
 - When you inline a function, you may enable the compiler to perform context-specific optimization on the body of the function.
 
+### Access Specifiers and Friend functions:
+- https://www.geeksforgeeks.org/friend-class-function-cpp/?ref=lbp
+- 
 
 # C++ Data Structures
 ### Macros for data type ranges
