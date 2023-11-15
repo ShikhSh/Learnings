@@ -54,7 +54,8 @@ new/delete vs malloc vs static/automatic allocation
 - Static
 
 ### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
-https://www.geeksforgeeks.org/virtual-function-cpp/#
+- https://home.cse.ust.hk/~dekai/151H_2008Q1/lectures/l15_overriding.pdf -> seems correct
+- https://www.geeksforgeeks.org/virtual-function-cpp/# -> could be wrong
 
 ### Auto Keyword:
 - The idea of the auto keyword was to form the C++ compiler to deduce the data type while compiling instead of making you declare the data type every freaking time. Do keep in mind that you cannot declare something without an initializer. There must be some way for the compiler to deduce your type.
