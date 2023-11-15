@@ -55,36 +55,50 @@ new/delete vs malloc vs static/automatic allocation
 
 ### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
 - https://home.cse.ust.hk/~dekai/151H_2008Q1/lectures/l15_overriding.pdf -> seems correct
+- https://www.geeksforgeeks.org/virtual-function-cpp/?ref=lbp
 - Virtual functions needed with overriding for Runtime Polymorphism (if we do not have a function defined as virtual, the one which is object TYPE determines which one is executed.
 ```
+// C++ program to illustrate
+// concept of Virtual Functions
+ 
 #include <iostream>
 using namespace std;
-
-class B {
-private: int x;
+ 
+class base {
 public:
-B() { cout << "creating B\n"; }
-void func() {
-    cout << "func B\n";
-}
-virtual ~B() { cout << "destroying B\n"; }
+    virtual void print() { cout << "print base class\n"; }
+ 
+    void show() { cout << "show base class\n"; }
 };
-
-class D: public B {
-private: int y;
+ 
+class derived : public base {
 public:
-void func() {
-    cout << "func D\n";
-}
-D() { cout << "creating D\n"; }
-virtual ~D() { cout << "destroying D\n"; }
+    void print() { cout << "print derived class\n"; }
+ 
+    void show() { cout << "show derived class\n"; }
 };
-main() {
-    B *b = new D;
-    b->func();
-    delete b;
+ 
+int main()
+{
+    base* bptr;
+    derived d;
+    bptr = &d;
+ 
+    // Virtual function, binded at runtime
+    bptr->print();
+ 
+    // Non-virtual function, binded at compile time
+    bptr->show();
+ 
+    return 0;
 }
+
+Output
+print derived class
+show base class
 ```
+- Late binding (Runtime) is done in accordance with the content of the pointer (i.e. location pointed to by pointer) and Early binding (Compile-time) is done according to the type of pointer since the print() function is declared with the virtual keyword so it will be bound at runtime (output is print derived class as the pointer is pointing to object of derived class) and show() is non-virtual so it will be bound during compile time (output is show base class as the pointer is of base type).
+
 - https://www.geeksforgeeks.org/virtual-function-cpp/# -> could be wrong
 
 ### Auto Keyword:
@@ -126,7 +140,41 @@ https://www.geeksforgeeks.org/c-classes-and-objects/?ref=lbp
 
 ### Access Specifiers and Friend functions:
 - https://www.geeksforgeeks.org/friend-class-function-cpp/?ref=lbp
-- 
+
+### Inheritance:
+- https://www.geeksforgeeks.org/inheritance-in-c/?ref=lbp#
+```
+class  <derived_class_name> : <access-specifier> <base_class_name>
+{
+        //body
+}
+Example:
+1. class ABC : private XYZ              //private derivation
+            {                }
+2. class ABC : public XYZ              //public derivation
+            {               }
+3. class ABC : protected XYZ              //protected derivation
+            {              }
+4. class ABC: XYZ                            //private derivation by default
+{            }
+```
+- When a base class is privately inherited by the derived class, public members of the base class becomes the private members of the derived class and therefore, the public members of the base class can only be accessed by the member functions of the derived class. They are inaccessible to the objects of the derived class.
+- On the other hand, when the base class is publicly inherited by the derived class, public members of the base class also become the public members of the derived class. Therefore, the public members of the base class are accessible by the objects of the derived class as well as by the member functions of the derived class.
+```
+class A
+{ 
+... .. ... 
+};
+class B
+{
+... .. ...
+};
+class C: public A,public B
+{
+... ... ...
+};
+```
+### Multiple Inheritance + calling parent's constructors 
 
 # C++ Data Structures
 ### Macros for data type ranges
