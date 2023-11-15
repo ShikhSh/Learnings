@@ -34,19 +34,22 @@ https://stackoverflow.com/questions/6500313/why-should-c-programmers-minimize-us
 https://isocpp.org/wiki/faq/freestore-mgmt#:~:text=Having%20said%20that%2C%20benefits%20of,which%20isn't%20type%20safe.
 https://stackoverflow.com/questions/655065/when-should-i-use-the-new-keyword-in-c
 
-new/delete vs malloc vs static allocation
+new/delete vs malloc vs static/automatic allocation
 - RAII - https://en.wikipedia.org/wiki/Resource_acquisition_is_initialization
   -  Resource allocation (or acquisition) is done during object creation (specifically initialization), by the constructor, while resource deallocation (release) is done during object destruction (specifically finalization), by the destructor. In other words, resource acquisition must succeed for initialization to succeed. Thus the resource is guaranteed to be held between when initialization finishes and finalization starts (holding the resources is a class invariant), and to be held only when the object is alive. Thus if there are no object leaks, there are no resource leaks.
   -  RAII greatly simplifies resource management, reduces overall code size, and helps ensure program correctness. RAII is therefore recommended by industry-standard guidelines, and most of the C++ standard library follows the idiom.
   -  Local variables allow easy management of multiple resources within a single function: they are destroyed in the reverse order of their construction, and an object is destroyed only if fully constructed.
+  -  It "wraps" resources into objects.
   -  Provides encapsulation - encapsulate each resource into a class, where
     - the constructor acquires the resource and establishes all class invariants or throws an exception if that cannot be done,
     - the destructor releases the resource and never throws exceptions;
   -  Resource management therefore needs to be tied to the lifespan of suitable objects in order to gain automatic allocation and reclamation. Resources are acquired during initialization, when there is no chance of them being used before they are available, and released with the destruction of the same objects, which is guaranteed to take place even in case of errors.
+  -  In C++, this is called automatic storage because the storage is claimed automatically at the end of scope.
   -  Ownership of dynamically allocated objects (memory allocated with new in C++) can also be controlled with RAII, such that the object is released when the RAII (stack-based) object is destroyed. For this purpose, the C++11 standard library defines the smart pointer classes std::unique_ptr for single-owned objects and std::shared_ptr for objects with shared ownership.
   -  Perl, Python (in the CPython implementation),[20] and PHP[21] manage object lifetime by reference counting, which makes it possible to use RAII. Objects that are no longer referenced are immediately destroyed or finalized and released, so a destructor or finalizer can release the resource at that time.
 
 - IMP! For DSA - If creating a Treenode or TrieNode, use dynamic memory allocation with New, since they need to persist beyond the scope of the current object/function to be tested on online platforms.
+  - Heap/Dynamic memory allocation: You want to allocate memory that will persist after leaving the current block.
 - Dynamic
 - Static
 
