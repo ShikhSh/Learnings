@@ -55,6 +55,36 @@ new/delete vs malloc vs static/automatic allocation
 
 ### Virtual functions + Runtime Polymorphism + Dynamic/Late Binding
 - https://home.cse.ust.hk/~dekai/151H_2008Q1/lectures/l15_overriding.pdf -> seems correct
+- Virtual functions needed with overriding for Runtime Polymorphism (if we do not have a function defined as virtual, the one which is object TYPE determines which one is executed.
+```
+#include <iostream>
+using namespace std;
+
+class B {
+private: int x;
+public:
+B() { cout << "creating B\n"; }
+void func() {
+    cout << "func B\n";
+}
+virtual ~B() { cout << "destroying B\n"; }
+};
+
+class D: public B {
+private: int y;
+public:
+void func() {
+    cout << "func D\n";
+}
+D() { cout << "creating D\n"; }
+virtual ~D() { cout << "destroying D\n"; }
+};
+main() {
+    B *b = new D;
+    b->func();
+    delete b;
+}
+```
 - https://www.geeksforgeeks.org/virtual-function-cpp/# -> could be wrong
 
 ### Auto Keyword:
