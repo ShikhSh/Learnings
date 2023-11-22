@@ -28,6 +28,11 @@
 - For Vectors/Maps/Sets or anything else including int, etc -> use & operator
   - void pass_by_ref(vector<int>& v) {...}
 - For array -> can use pointers
+```
+TN c;
+TN& c2 = c; // Pass by reference, becuz of '&'
+TN c2 = c; // pass by value by default
+```
 
 ### Memory Allocation and Resource Management:
 https://stackoverflow.com/questions/6500313/why-should-c-programmers-minimize-use-of-new
