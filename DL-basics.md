@@ -5,3 +5,8 @@
 
 # Basic Concepts:
 ### Batch Normalization
+- We assume in DL: All train data comes from the same distribution.
+- Assumption not true across batches
+- Thus, to remove Covariate Shifts in data:
+-   Bring to origin
+-   
