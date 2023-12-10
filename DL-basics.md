@@ -8,5 +8,34 @@
 - We assume in DL: All train data comes from the same distribution.
 - Assumption not true across batches
 - Thus, to remove Covariate Shifts in data:
-  -   Bring to origin
--   
+  - Bring to origin (normalize each mini batch) 
+  - Move to the actual whole data (alpha*Zcap + beta)
+- AFFINE (WX+b) -> BatchNorm -> Activation
+- during the test (we might not send mini-batches, thus use the same mean and variance as calculated during the train phase).
+- Complicates back-propagation
+- Cons:
+  - Batch size small
+  - OR not much variation in each batch
+  - THEN gradients not propagated back from the B.N.
+
+
+# Sequence to Sequence Translation:
+- Language Modeling:
+  - Given N-1 words, predict the Nth word
+  - Actually predicts a probability distribution over the whole Vocabulary for the next word
+  - Sample the next word from this distribution/pick up the max probability one
+  - Inputs could be 1-hot encoding, but they are
+    - sparse
+    - don't capture semantic or contextual information (i.e. distance between any two words is the same
+    - Thus use semantic embedding in a smaller dimensional space.
+  - Append <sos> and <eos> to Vocab to know when to begin predicting and when to end predictions
+
+### Transition from LSTM to Attn: (Attention is all you need paper)
+- We used 1 LSTM to capture the input sentence, and then when it encountered EOS, it starts emitting the output until it emits EOS.
+- Problem:
+  - One Hidden state is supposed to capture the whole of the Input seq
+- Thus, give input to all
+- Problem:
+  - At every time-step O/P sees all of the inputs with the same wts
+- Thus, with every input, associate a weight for every output.
+- P(O<sub>t</sub>, Ot-1 
