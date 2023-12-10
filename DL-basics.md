@@ -29,6 +29,9 @@
     - don't capture semantic or contextual information (i.e. distance between any two words is the same
     - Thus use semantic embedding in a smaller dimensional space.
   - Append <sos> and <eos> to Vocab to know when to begin predicting and when to end predictions
+  - Generative Language Modeling:
+
+    P(O<sub>1</sub> , O<sub>2</sub> ... O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) = P(O<sub>1</sub> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) * P(O<sub>2</sub> , O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos> , O<sub>1</sub>) ... 
 
 ### Transition from LSTM to Attn: (Attention is all you need paper)
 - We used 1 LSTM to capture the input sentence, and then when it encountered EOS, it starts emitting the output until it emits EOS.
@@ -38,4 +41,4 @@
 - Problem:
   - At every time-step O/P sees all of the inputs with the same wts
 - Thus, with every input, associate a weight for every output.
-- P(O<sub>1</sub> , O<sub>2</sub> ... O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) = P(O<sub>1</sub> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) * P(O<sub>2</sub> , O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos> , O<sub>1</sub>) ... 
+
