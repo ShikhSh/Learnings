@@ -74,6 +74,13 @@ SOURCES:
 - When using 1 set of matrices of K, Q, V -  Single head attention
 - When using multiple sets of matrices - Multi-head attention
 
+### Learning:
+- Multi-task learning: Teach on multiple tasks
+- Transfer Learning: teach on something else and then we care about just one final application
+- Pre-training: Train for one purpose initially and then fine tune on the final task
+- Prompting: Use a trained model for different tasks (no fine-tuning here)
+- 
+
 ### Transformer:
 #### About:
 - Seq to Seq models
@@ -84,6 +91,7 @@ SOURCES:
   1. Multi-headed self attn
   2. Cross Attention between encoder and decoder
   3. Masked Self attn in decoder
+    - Masked attn in decoder preserved the auto-regressive nature while letting it train fast and in parallel, instead of waiting for sequential output
   4. Positional embeddings
   5. Layer Norm
     - Normalizes mean and variance of the O/P of embeddings
@@ -91,6 +99,8 @@ SOURCES:
   6. Residual connections
   7. Scheduler - AdamW (increase and then decreased)
   8. Label Smoothing - Redistribution of probabilities
+  9. Multi-task learning
+    - Trained on multiple tasks
 
 #### Advantages:
 - Removed Vanishing gradient problems of LSTM
