@@ -93,9 +93,10 @@ SOURCES:
   3. Masked Self attn in decoder
     - Masked attn in decoder preserved the auto-regressive nature while letting it train fast and in parallel, instead of waiting for sequential output
   4. Positional embeddings
-  5. Layer Norm
+  5. Layer Normalization
     - Normalizes mean and variance of the O/P of embeddings
     - Large/Small embeddings - bad for future layer computations
+    - https://h2o.ai/wiki/layer-normalization/
   6. Residual connections
   7. Scheduler - AdamW (increase and then decreased)
   8. Label Smoothing - Redistribution of probabilities
