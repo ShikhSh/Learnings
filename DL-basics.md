@@ -4,6 +4,7 @@ SOURCES:
 - https://github.com/mlabonne/llm-course
 - LLama2 notebook - https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd#scrollTo=OJXpOgBFuSrc
 - https://machinelearning-basics.com/
+- https://h2o.ai/wiki/attention-mechanism/ -> for attn, BERT related stuff, Transformers, Layer Norm
 
 # Neural Network intro:
 - Neural Networks: Universal function approximator (need to be trained for it)
@@ -96,6 +97,9 @@ SOURCES:
   5. Layer Normalization
     - Normalizes mean and variance of the O/P of embeddings
     - Large/Small embeddings - bad for future layer computations
+    - Layer Normalization is a technique used in machine learning and artificial intelligence to normalize the inputs of a neural network layer. It ensures that the inputs have a consistent distribution and reduces the internal covariate shift problem that can occur during training. By normalizing the inputs, Layer Normalization enhances the stability and generalization of the network.
+    - Layer Normalization operates by calculating the mean and variance of the inputs for each sample. It then applies a normalization transformation to the inputs, bringing them to a standard distribution. This helps to reduce the impact of different scales and ranges of feature values, making the learning process more stable and efficient.
+    - Indep of batch sizes (unlike Batch Norm)
     - https://h2o.ai/wiki/layer-normalization/
   6. Residual connections
   7. Scheduler - AdamW (increase and then decreased)
