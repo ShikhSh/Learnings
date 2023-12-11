@@ -1,3 +1,9 @@
+SOURCES:
+- https://nn.labml.ai/
+- https://twitter.com/maximelabonne
+- https://github.com/mlabonne/llm-course
+- LLama2 notebook - https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd#scrollTo=OJXpOgBFuSrc
+
 # Neural Network intro:
 - Neural Networks: Universal function approximator (need to be trained for it)
 - Actual loss cannot be used (we do not have all possible values) - so use proxy for actual loss i.e. calculate the Average of Divergence of Loss over the training dataset only
@@ -50,6 +56,15 @@
   - Problem:
     - No concept of sequence in the Encoder now, since everyone can see everyone (no locality bias)
 - Thus, add positional embeddings
+#### Mathematics:
+- K, Q, V matrices
+  - Query -> used to find the weights of all wrt current token
+  - Key -> the value used for finding current token's weight for any other token
+  - Value -> the value used when weights of all others are found
+- w<sub>i</sub> = <QK<sup>T</sup> / sqrt root of d
+- ATTN(Q, K, V) = Softmax of W's * V
+- Scaling by root of d:
+  - This is done to avoid large dot-product values causing softmax to give very small gradients when dk is large.
 
 ### Transformer:
 #### Decoder:
