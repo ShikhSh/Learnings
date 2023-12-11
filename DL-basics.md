@@ -77,10 +77,11 @@ SOURCES:
 
 ### Learning:
 - Multi-task learning: Teach on multiple tasks
-- Transfer Learning: teach on something else and then we care about just one final application
-- Pre-training: Train for one purpose initially and then fine tune on the final task
-- Prompting: Use a trained model for different tasks (no fine-tuning here)
-- 
+- Transfer Learning: Out of all tasks taught on, we care about just one/few final applications
+- Pre-training: Train for one purpose initially and then fine tune on the final task (transfer learning in a sequential order)
+- Prompting: Use a trained model for different tasks (no fine-tuning here) by giving it prompts
+- Few Shot/ Zero Shot learning - Perform a task with very few egs
+- Knowledge Distillation: Learnings and generalizations of a large model into a smaller one
 
 ### Transformer:
 #### About:
@@ -102,10 +103,13 @@ SOURCES:
     - Indep of batch sizes (unlike Batch Norm)
     - https://h2o.ai/wiki/layer-normalization/
   6. Residual connections
-  7. Scheduler - AdamW (increase and then decreased)
+  7. Scheduler - AdamW
+  8. LR warm up - increase and then decreased LR (can't trust model too much in the beginning)
   8. Label Smoothing - Redistribution of probabilities
   9. Multi-task learning
     - Trained on multiple tasks
+  10. Average model: avg model wts for last few epochs
+  11. Gradient Accumulation: Split into mini batches on multiple GPUs or multiple iterations on the same, accumulate the gradient at the end before performing Grad descent (for using large batch sizes)
 
 #### Advantages:
 - Removed Vanishing gradient problems of LSTM
