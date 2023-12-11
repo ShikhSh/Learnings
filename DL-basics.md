@@ -136,5 +136,14 @@ Below are the training objectives: (could be that we ask it to generate the next
 
 ### Language Models:
 #### BERT:
+- All Tx based
+- Different data used to train
+- Different Objective
+| Parameter/Model | BERT | 
+| -------------   | ------------- |
+| About    | Input: Embeddings, Position Embeddings, Segment Embedings  |
+| Objective    | Masked Word Prediction + Next sentence prediction  |
+| Training Data | - Wikipedia + Books corpus |
+| Notes | <ul><li>Gives Birectional Contexts</li><li>Contextual Representations (different representations for word 'bank' in river and money situations</li></ul> |
 - Gives contextualized representations
 
