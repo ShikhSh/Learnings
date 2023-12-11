@@ -144,6 +144,6 @@ Below are the training objectives: (could be that we ask it to generate the next
 | About    | Input: Embeddings, Position Embeddings, Segment Embedings  |
 | Objective    | Masked Word Prediction + Next sentence prediction  |
 | Training Data | - Wikipedia + Books corpus |
-| Notes | <ul><li>Gives Birectional Contexts</li>
-              <li>Contextual Representations (different representations for word 'bank' in river and money situations</li></ul> |
+| Results | <ul><li>Gives Birectional Contexts</li><li>Contextual Representations (different representations for word 'bank' in river and money situations</li></ul> |
+| Notes | <ul><li>15% of total words masked</li><li>Out of 15% - 80% with [MASK], 10% random, 10% No change</li></ul> |
 
