@@ -117,8 +117,9 @@ SOURCES:
   - This is done to avoid large dot-product values causing softmax to give very small gradients when dk is large.
 
 #### Decoder:
-- Not Bidirectional (uses Masked Self Attn)
-- Auto-Regressive (since we input the previous outputs)
+Below are the training objectives: (could be that we ask it to generate the next word OR could be that we ask it to generate the Masked word given the words before and after it)
+- Could be Bidirectional (uses Masked Self Attn to mask out some words in between and asks to generate them) -> eg BERT 
+- Auto-Regressive (since we input the previous outputs - training objective could be generate the next word given the previous ones) -> GPT
 
 #### Transformers during inference:
 - Use Teacher forcing (else gets very difficult to find 1-1 correspondence between Actual O/P and desired output and model needs to be trained because one wrong prediction can lead to faulty outputs in all O/Ps in future steps
