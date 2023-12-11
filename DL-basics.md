@@ -51,4 +51,5 @@
 
 ### LM during inference:
 - Beam Search? -> only during inference, right?
+- CTC? where and check again!
 
