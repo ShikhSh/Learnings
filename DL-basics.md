@@ -39,6 +39,9 @@ SOURCES:
   - Generative Language Modeling: (Using Bayes Rule)
     P(O<sub>1</sub> , O<sub>2</sub> ... O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) = P(O<sub>1</sub> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) * P(O<sub>2</sub> , O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos> , O<sub>1</sub>) ... 
 
+#### Measuring:
+- BLEU score: Bilingual Evaluation Understanding -> finds score for machine translation
+
 ### Transition from LSTM to Attn: (Attention is all you need paper)
 - We used 1 LSTM to capture the input sentence, and then when it encountered EOS, it starts emitting the output until it emits EOS.
   - Problem:
@@ -60,6 +63,18 @@ SOURCES:
 - When using 1 set of matrices of K, Q, V -  Single head attention
 - When using multiple sets of matrices - Multi-head attention
 
+### Transformer:
+#### About:
+- Seq to Seq models
+- Variable sized inputs accepted (with padding - and ignores the padded part later on)
+- Characteristics:
+  1. Multi-headed self attn
+  2. 
+
+#### Advantages:
+- Removed Vanishing gradient problems of LSTM
+- Parallelized the computations
+
 #### Mathematics:
 - K, Q, V matrices
   - Query -> used to find the weights of all wrt current token
@@ -70,7 +85,6 @@ SOURCES:
 - Scaling by root of d:
   - This is done to avoid large dot-product values causing softmax to give very small gradients when dk is large.
 
-### Transformer:
 #### Decoder:
 - Not Bidirectional (uses Masked Self Attn)
 - Auto-Regressive (since we input the previous outputs)
@@ -82,4 +96,8 @@ SOURCES:
 #### Transformers during inference:
 - Beam Search? -> only during inference, right?
 - CTC? where and check again!
+
+### Language Models:
+#### BERT:
+- Gives contextualized representations
 
