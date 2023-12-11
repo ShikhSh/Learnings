@@ -145,5 +145,5 @@ Below are the training objectives: (could be that we ask it to generate the next
 | Objective    | Masked Word Prediction + Next sentence prediction  |
 | Training Data | - Wikipedia + Books corpus |
 | Results | <ul><li>Gives Birectional Contexts</li><li>Contextual Representations (different representations for word 'bank' in river and money situations</li></ul> |
-| Notes | <ul><li>15% of total words masked</li><li>Out of 15% - 80% with [MASK], 10% random, 10% No change</li></ul> |
+| Notes | <ul><li>15% of total words masked</li><li>Out of 15% - 80% with [MASK], 10% random, 10% No change</li><li>[CLS] - Classify token - used for IsNextSent task, and hence can be used to get the emb of whole sent</li></ul> |
 
