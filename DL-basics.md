@@ -36,11 +36,19 @@ SOURCES:
     - don't capture semantic or contextual information (i.e. distance between any two words is the same
     - Thus use semantic embedding in a smaller dimensional space.
   - Append <sos> and <eos> to Vocab to know when to begin predicting and when to end predictions
-  - Generative Language Modeling: (Using Bayes Rule)
-    P(O<sub>1</sub> , O<sub>2</sub> ... O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) = P(O<sub>1</sub> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) * P(O<sub>2</sub> , O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos> , O<sub>1</sub>) ... 
+  - Discriminative Language Modeling: (Using Bayes Rule) - gives probability of output directly
+    P(O<sub>1</sub> , O<sub>2</sub> ... O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) = P(O<sub>1</sub> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos>) * P(O<sub>2</sub> , O<sub>t-1</sub> , O<sub>t</sub> , <eos> / I<sub>1</sub> , I<sub>2</sub> ... I<sub>k-1</sub> , I<sub>k</sub> , <sos> , O<sub>1</sub>) ...
+  - Generative Language Model: P(X, y) = P(X/y).P(y) -> class conditioned LM, and does not give output probability directly and hence not used that often.
 
 #### Measuring:
 - BLEU score: Bilingual Evaluation Understanding -> finds score for machine translation
+- Accuracy = what % is correct -> bad for imbalanced class
+- Precision = tp/(tp+fp) out of what it retrieved, how many were correct
+- Recall = tp/(tp+fn) out of all correct how many could it retrieve
+- F-score = Harmonic mean = 2*P*R/(P+R)
+- Coomparing models:
+  - P-test = lower p-value, more significant is the difference
+  - Confidence Interval = We have 2 models, and both of them are ran on N data points, it Model 1 is better x times then it is x% confident.
 
 ### Transition from LSTM to Attn: (Attention is all you need paper)
 - We used 1 LSTM to capture the input sentence, and then when it encountered EOS, it starts emitting the output until it emits EOS.
