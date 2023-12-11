@@ -27,6 +27,9 @@ SOURCES:
 
 
 # Sequence to Sequence Translation:
+### Auto-regressive models:
+  - Models which predict future on the basis of past (output of the model is fed into it again)
+
 ### Language Modeling:
   - Given N-1 words, predict the Nth word
   - Actually predicts a probability distribution over the whole Vocabulary for the next word
@@ -75,9 +78,19 @@ SOURCES:
 #### About:
 - Seq to Seq models
 - Variable sized inputs accepted (with padding - and ignores the padded part later on)
+- Self attn gives contextual embeddings
+- Multi-head attn: every head focuses on different aspects of the inputs
 - Characteristics:
   1. Multi-headed self attn
-  2. 
+  2. Cross Attention between encoder and decoder
+  3. Masked Self attn in decoder
+  4. Positional embeddings
+  5. Layer Norm
+    - Normalizes mean and variance of the O/P of embeddings
+    - Large/Small embeddings - bad for future layer computations
+  6. Residual connections
+  7. Scheduler - AdamW (increase and then decreased)
+  8. Label Smoothing - Redistribution of probabilities
 
 #### Advantages:
 - Removed Vanishing gradient problems of LSTM
