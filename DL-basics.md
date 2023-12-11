@@ -139,6 +139,7 @@ Below are the training objectives: (could be that we ask it to generate the next
 - All Tx based
 - Different data used to train
 - Different Objective
+
 | Parameter/Model | BERT          | 
 | -------------   | ------------- |
 | About    | Input: Embeddings, Position Embeddings, Segment Embedings  |
