@@ -39,17 +39,28 @@
 - Thus, give input to all
   - Problem:
     - At every time-step O/P sees all of the inputs with the same wts
-- Thus, with every input, associate a weight for every output.
+- Thus, with every input to decoder (which comes from encoder), associate a weight for every output. -> ATTENTION!!!! -> Cross Attention (since between encoder and decoder)
   - Problem:
     - Hidden state in O/P needs to preserve the output context
-- Thus, add the output at prev step as another input
+- Thus, add the output at prev step as another input (use teacher forcing from time-to-time)
+  - Question:
+    - Do we even need recurrence anymore?
+- We can apply self-attention and get rid of recurrence
+  - Since got rid of attention, attention is all you need.
+  - Problem:
+    - No concept of sequence in the Encoder now, since everyone can see everyone (no locality bias)
+- Thus, add positional embeddings
 
 ### Transformer:
 #### Decoder:
 - Not Bidirectional (uses Masked Self Attn)
 - Auto-Regressive (since we input the previous outputs)
 
-### LM during inference:
+#### Transformers during inference:
+- Use Teacher forcing (else gets very difficult to find 1-1 correspondence between Actual O/P and desired output and model needs to be trained because one wrong prediction can lead to faulty outputs in all O/Ps in future steps
+
+
+#### Transformers during inference:
 - Beam Search? -> only during inference, right?
 - CTC? where and check again!
 
