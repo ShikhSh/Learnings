@@ -20,7 +20,7 @@
 
 
 # Sequence to Sequence Translation:
-- Language Modeling:
+### Language Modeling:
   - Given N-1 words, predict the Nth word
   - Actually predicts a probability distribution over the whole Vocabulary for the next word
   - Sample the next word from this distribution/pick up the max probability one
@@ -34,10 +34,21 @@
 
 ### Transition from LSTM to Attn: (Attention is all you need paper)
 - We used 1 LSTM to capture the input sentence, and then when it encountered EOS, it starts emitting the output until it emits EOS.
-- Problem:
-  - One Hidden state is supposed to capture the whole of the Input seq
+  - Problem:
+    - One Hidden state is supposed to capture the whole of the Input seq
 - Thus, give input to all
-- Problem:
-  - At every time-step O/P sees all of the inputs with the same wts
+  - Problem:
+    - At every time-step O/P sees all of the inputs with the same wts
 - Thus, with every input, associate a weight for every output.
+  - Problem:
+    - Hidden state in O/P needs to preserve the output context
+- Thus, add the output at prev step as another input
+
+### Transformer:
+#### Decoder:
+- Not Bidirectional (uses Masked Self Attn)
+- Auto-Regressive (since we input the previous outputs)
+
+### LM during inference:
+- Beam Search? -> only during inference, right?
 
