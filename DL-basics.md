@@ -3,6 +3,7 @@ SOURCES:
 - https://twitter.com/maximelabonne
 - https://github.com/mlabonne/llm-course
 - LLama2 notebook - https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd#scrollTo=OJXpOgBFuSrc
+- https://machinelearning-basics.com/
 
 # Neural Network intro:
 - Neural Networks: Universal function approximator (need to be trained for it)
@@ -56,6 +57,9 @@ SOURCES:
   - Problem:
     - No concept of sequence in the Encoder now, since everyone can see everyone (no locality bias)
 - Thus, add positional embeddings
+- When using 1 set of matrices of K, Q, V -  Single head attention
+- When using multiple sets of matrices - Multi-head attention
+
 #### Mathematics:
 - K, Q, V matrices
   - Query -> used to find the weights of all wrt current token
